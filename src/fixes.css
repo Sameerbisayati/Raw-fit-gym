@@ -112,3 +112,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     font-size: 0.75rem;
   }
 }
+
+/* ROI calculator: small screens */
+.roi-calculator-card > * { min-width: 0; }
+
+@media (max-width: 768px) {
+  .roi-calculator-card { border-radius: 16px; }
+  .calc-inputs-col,
+  .calc-results-col { padding: 1.5rem 1.25rem; }
+
+  .toggle-btn { padding: 0.75rem 0.4rem; font-size: 0.85rem; }
+
+  .slider-header {
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+  }
+  .input-label { font-size: 0.8rem; margin-bottom: 0.25rem; }
+  .slider-val { font-size: 0.95rem; }
+
+  /* bigger, easier-to-drag slider on touch screens */
+  .custom-slider { height: 28px; margin-top: 0.25rem; }
+
+  .results-grid { gap: 0.75rem; }
+  .res-card { padding: 1rem 0.85rem; }
+  .res-lbl { font-size: 0.7rem; }
+  .res-val { font-size: 1.05rem; word-break: break-word; }
+
+  .roi-note { font-size: 0.75rem; }
+}
+
+@media (max-width: 400px) {
+  .results-grid { grid-template-columns: 1fr; }
+}
